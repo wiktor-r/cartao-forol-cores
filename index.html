@@ -1,0 +1,32 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cartão Foról · cores em 3D</title><style>
+*{box-sizing:border-box}
+body{margin:0;height:100vh;display:flex;flex-direction:column;background:var(--albedo-bg,#faf8f3);color:var(--albedo-text,#222);font-family:var(--albedo-sans,system-ui,sans-serif)}
+.bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--albedo-border,#ddd);background:var(--albedo-surface,#fff)}
+.bar h1{font-size:14px;margin:0 8px 0 0;font-weight:600}
+.chip{display:flex;align-items:center;gap:7px;border:1px solid var(--albedo-border,#ddd);background:var(--albedo-bg,#fff);color:inherit;border-radius:999px;padding:5px 11px 5px 6px;font:inherit;font-size:13px;cursor:pointer}
+.chip.on{border-color:var(--albedo-accent,#333);box-shadow:0 0 0 1.5px var(--albedo-accent,#333) inset}
+.sws{display:flex} .sws i{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.18);margin-left:-4px} .sws i:first-child{margin-left:0}
+.right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.right a{font-size:12px;color:var(--albedo-muted,#666)}
+#pick{background:var(--albedo-accent,#333);color:var(--albedo-bg,#fff);border:0;border-radius:8px;padding:7px 13px;font:inherit;font-size:13px;cursor:pointer}
+#pick:disabled{opacity:.6;cursor:default}
+iframe{flex:1;width:100%;border:0;display:block}
+.hint{font-size:12px;color:var(--albedo-muted,#666);padding:6px 14px;border-bottom:1px solid var(--albedo-border,#ddd)}
+</style></head><body>
+<div class="bar"><h1>Cores em 3D</h1><button class="chip" data-i="0" data-name="Campanha (atual)" data-hex="papel #EEE3BA · destaque #E33122 · fundo #99992F">
+<span class="sws"><i style="background:#EEE3BA"></i><i style="background:#E33122"></i><i style="background:#99992F"></i></span>Campanha (atual)</button><button class="chip" data-i="1" data-name="Noite de Fortaleza" data-hex="papel #F2E6C4 · destaque #E33122 · fundo #1E2B4A">
+<span class="sws"><i style="background:#F2E6C4"></i><i style="background:#E33122"></i><i style="background:#1E2B4A"></i></span>Noite de Fortaleza</button><button class="chip" data-i="2" data-name="Pinheiro" data-hex="papel #F1E4C3 · destaque #D7262B · fundo #1F4D3B">
+<span class="sws"><i style="background:#F1E4C3"></i><i style="background:#D7262B"></i><i style="background:#1F4D3B"></i></span>Pinheiro</button><button class="chip" data-i="3" data-name="Vermelhão" data-hex="papel #F2E6C4 · destaque #1F4D3B · fundo #C8281E">
+<span class="sws"><i style="background:#F2E6C4"></i><i style="background:#1F4D3B"></i><i style="background:#C8281E"></i></span>Vermelhão</button><button class="chip" data-i="4" data-name="Mar do Ceará" data-hex="papel #F4E5C6 · destaque #EE5A36 · fundo #0F6B73">
+<span class="sws"><i style="background:#F4E5C6"></i><i style="background:#EE5A36"></i><i style="background:#0F6B73"></i></span>Mar do Ceará</button><button class="chip" data-i="5" data-name="Vinho e ouro" data-hex="papel #F3E7C9 · destaque #B07A1E · fundo #5B1B2C">
+<span class="sws"><i style="background:#F3E7C9"></i><i style="background:#B07A1E"></i><i style="background:#5B1B2C"></i></span>Vinho e ouro</button><button class="chip" data-i="6" data-name="Chita" data-hex="papel #F6E9CF · destaque #E0457B · fundo #2E7D4F">
+<span class="sws"><i style="background:#F6E9CF"></i><i style="background:#E0457B"></i><i style="background:#2E7D4F"></i></span>Chita</button><div class="right"><a href="plano.html">vistas planas</a><button id="pick">Escolher esta</button></div></div>
+<iframe id="f" title="modelo 3D"></iframe>
+<script>
+const chips=[...document.querySelectorAll('.chip')], f=document.getElementById('f'), pick=document.getElementById('pick');
+let cur=+(localStorage.getItem('pal')||0);
+function show(i){cur=i;localStorage.setItem('pal',i);chips.forEach(c=>c.classList.toggle('on',+c.dataset.i===i));f.src='v'+i+'.html';pick.disabled=false;pick.textContent='Escolher “'+chips[i].dataset.name+'”';}
+chips.forEach(c=>c.onclick=()=>show(+c.dataset.i)); show(cur<chips.length?cur:0);
+pick.onclick=async()=>{const c=chips[cur];pick.disabled=true;try{await albedo.send('Escolhi a paleta "'+c.dataset.name+'" ('+c.dataset.hex+') para o cartão.');pick.textContent='Enviado';}catch(e){pick.disabled=false}};
+</script><script>if(typeof albedo==='undefined')document.querySelectorAll('#pick,footer button').forEach(b=>b.style.display='none');</script></body></html>

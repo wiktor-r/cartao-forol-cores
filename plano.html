@@ -1,0 +1,74 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cartão Foról · estudo de cores</title><style>
+:root{color-scheme:light dark}
+body{margin:0;background:var(--albedo-bg,#faf8f3);color:var(--albedo-text,#222);font-family:var(--albedo-sans,system-ui,sans-serif)}
+main{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:1.35rem;margin:0 0 4px} .lead{color:var(--albedo-muted,#666);margin:0 0 22px;font-size:.92rem;line-height:1.45}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tabs button{border:1px solid var(--albedo-border,#ddd);background:var(--albedo-surface,#fff);color:inherit;border-radius:999px;padding:6px 12px;font:inherit;font-size:.85rem;cursor:pointer}
+.tabs button.on{background:var(--albedo-accent,#333);color:var(--albedo-bg,#fff);border-color:transparent}
+.card{background:var(--albedo-surface,#fff);border:1px solid var(--albedo-border,#e5e2da);border-radius:14px;padding:16px;margin-bottom:18px}
+.card header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+h2{font-size:1.05rem;margin:0} .sws{display:flex;gap:6px} .sw{width:22px;height:22px;border-radius:6px;border:1px solid rgba(0,0,0,.15)}
+.imgs{display:grid;grid-template-columns:1fr 1fr 0.34fr;gap:12px;align-items:end}
+figure{margin:0} img{width:100%;display:block;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.15)} .tw img{box-shadow:none}
+figcaption{font-size:.75rem;color:var(--albedo-faint,#999);margin-top:5px}
+footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px;flex-wrap:wrap}
+code{font-family:var(--albedo-mono,monospace);font-size:.75rem;color:var(--albedo-muted,#666)}
+footer button{background:var(--albedo-accent,#333);color:var(--albedo-bg,#fff);border:0;border-radius:8px;padding:8px 14px;font:inherit;font-size:.85rem;cursor:pointer}
+footer button:disabled{opacity:.6;cursor:default}
+@media(max-width:720px){.imgs{grid-template-columns:1fr 1fr} .tw{display:none}}
+</style></head><body><main>
+<h1>Cartão de natal Foról · estudo de cores</h1><p><a href="index.html">← ver em 3D</a></p>
+<p class="lead">Mesmo desenho (o da última versão), só trocando as três cores: <b>papel</b> (fundo de fora, textos, torre), <b>destaque</b> (fita, traço da torre, presentes, gorros) e <b>fundo de dentro</b> (com o laço). Os bodes ficam como estão. Cores vistas em tela, convertidas pelo perfil CMYK da arte.</p>
+<div class="tabs" id="tabs"><button class="on" data-f="all">todas</button><button data-f="outside">só fora</button><button data-f="inside">só dentro</button></div>
+<article class="card" data-i="0">
+  <header><h2>Campanha (atual)</h2><div class="sws"><span class="sw" style="background:#EEE3BA" title="papel #EEE3BA"></span><span class="sw" style="background:#E33122" title="destaque #E33122"></span><span class="sw" style="background:#99992F" title="fundo de dentro #99992F"></span></div></header>
+  <div class="imgs"><figure><img src="img/0-outside.webp" alt="capa Campanha (atual)"><figcaption>fora (contracapa · capa)</figcaption></figure>
+  <figure><img src="img/0-inside.webp" alt="dentro Campanha (atual)"><figcaption>dentro</figcaption></figure>
+  <figure class="tw"><img src="img/0-tower.webp" alt="torre Campanha (atual)"><figcaption>torre</figcaption></figure></div>
+  <footer><code>papel #EEE3BA · destaque #E33122 · fundo #99992F</code><button data-name="Campanha (atual)" data-hex="papel #EEE3BA · destaque #E33122 · fundo #99992F">Escolher esta</button></footer>
+</article><article class="card" data-i="1">
+  <header><h2>Noite de Fortaleza</h2><div class="sws"><span class="sw" style="background:#F2E6C4" title="papel #F2E6C4"></span><span class="sw" style="background:#E33122" title="destaque #E33122"></span><span class="sw" style="background:#1E2B4A" title="fundo de dentro #1E2B4A"></span></div></header>
+  <div class="imgs"><figure><img src="img/1-outside.webp" alt="capa Noite de Fortaleza"><figcaption>fora (contracapa · capa)</figcaption></figure>
+  <figure><img src="img/1-inside.webp" alt="dentro Noite de Fortaleza"><figcaption>dentro</figcaption></figure>
+  <figure class="tw"><img src="img/1-tower.webp" alt="torre Noite de Fortaleza"><figcaption>torre</figcaption></figure></div>
+  <footer><code>papel #F2E6C4 · destaque #E33122 · fundo #1E2B4A</code><button data-name="Noite de Fortaleza" data-hex="papel #F2E6C4 · destaque #E33122 · fundo #1E2B4A">Escolher esta</button></footer>
+</article><article class="card" data-i="2">
+  <header><h2>Pinheiro</h2><div class="sws"><span class="sw" style="background:#F1E4C3" title="papel #F1E4C3"></span><span class="sw" style="background:#D7262B" title="destaque #D7262B"></span><span class="sw" style="background:#1F4D3B" title="fundo de dentro #1F4D3B"></span></div></header>
+  <div class="imgs"><figure><img src="img/2-outside.webp" alt="capa Pinheiro"><figcaption>fora (contracapa · capa)</figcaption></figure>
+  <figure><img src="img/2-inside.webp" alt="dentro Pinheiro"><figcaption>dentro</figcaption></figure>
+  <figure class="tw"><img src="img/2-tower.webp" alt="torre Pinheiro"><figcaption>torre</figcaption></figure></div>
+  <footer><code>papel #F1E4C3 · destaque #D7262B · fundo #1F4D3B</code><button data-name="Pinheiro" data-hex="papel #F1E4C3 · destaque #D7262B · fundo #1F4D3B">Escolher esta</button></footer>
+</article><article class="card" data-i="3">
+  <header><h2>Vermelhão</h2><div class="sws"><span class="sw" style="background:#F2E6C4" title="papel #F2E6C4"></span><span class="sw" style="background:#1F4D3B" title="destaque #1F4D3B"></span><span class="sw" style="background:#C8281E" title="fundo de dentro #C8281E"></span></div></header>
+  <div class="imgs"><figure><img src="img/3-outside.webp" alt="capa Vermelhão"><figcaption>fora (contracapa · capa)</figcaption></figure>
+  <figure><img src="img/3-inside.webp" alt="dentro Vermelhão"><figcaption>dentro</figcaption></figure>
+  <figure class="tw"><img src="img/3-tower.webp" alt="torre Vermelhão"><figcaption>torre</figcaption></figure></div>
+  <footer><code>papel #F2E6C4 · destaque #1F4D3B · fundo #C8281E</code><button data-name="Vermelhão" data-hex="papel #F2E6C4 · destaque #1F4D3B · fundo #C8281E">Escolher esta</button></footer>
+</article><article class="card" data-i="4">
+  <header><h2>Mar do Ceará</h2><div class="sws"><span class="sw" style="background:#F4E5C6" title="papel #F4E5C6"></span><span class="sw" style="background:#EE5A36" title="destaque #EE5A36"></span><span class="sw" style="background:#0F6B73" title="fundo de dentro #0F6B73"></span></div></header>
+  <div class="imgs"><figure><img src="img/4-outside.webp" alt="capa Mar do Ceará"><figcaption>fora (contracapa · capa)</figcaption></figure>
+  <figure><img src="img/4-inside.webp" alt="dentro Mar do Ceará"><figcaption>dentro</figcaption></figure>
+  <figure class="tw"><img src="img/4-tower.webp" alt="torre Mar do Ceará"><figcaption>torre</figcaption></figure></div>
+  <footer><code>papel #F4E5C6 · destaque #EE5A36 · fundo #0F6B73</code><button data-name="Mar do Ceará" data-hex="papel #F4E5C6 · destaque #EE5A36 · fundo #0F6B73">Escolher esta</button></footer>
+</article><article class="card" data-i="5">
+  <header><h2>Vinho e ouro</h2><div class="sws"><span class="sw" style="background:#F3E7C9" title="papel #F3E7C9"></span><span class="sw" style="background:#B07A1E" title="destaque #B07A1E"></span><span class="sw" style="background:#5B1B2C" title="fundo de dentro #5B1B2C"></span></div></header>
+  <div class="imgs"><figure><img src="img/5-outside.webp" alt="capa Vinho e ouro"><figcaption>fora (contracapa · capa)</figcaption></figure>
+  <figure><img src="img/5-inside.webp" alt="dentro Vinho e ouro"><figcaption>dentro</figcaption></figure>
+  <figure class="tw"><img src="img/5-tower.webp" alt="torre Vinho e ouro"><figcaption>torre</figcaption></figure></div>
+  <footer><code>papel #F3E7C9 · destaque #B07A1E · fundo #5B1B2C</code><button data-name="Vinho e ouro" data-hex="papel #F3E7C9 · destaque #B07A1E · fundo #5B1B2C">Escolher esta</button></footer>
+</article><article class="card" data-i="6">
+  <header><h2>Chita</h2><div class="sws"><span class="sw" style="background:#F6E9CF" title="papel #F6E9CF"></span><span class="sw" style="background:#E0457B" title="destaque #E0457B"></span><span class="sw" style="background:#2E7D4F" title="fundo de dentro #2E7D4F"></span></div></header>
+  <div class="imgs"><figure><img src="img/6-outside.webp" alt="capa Chita"><figcaption>fora (contracapa · capa)</figcaption></figure>
+  <figure><img src="img/6-inside.webp" alt="dentro Chita"><figcaption>dentro</figcaption></figure>
+  <figure class="tw"><img src="img/6-tower.webp" alt="torre Chita"><figcaption>torre</figcaption></figure></div>
+  <footer><code>papel #F6E9CF · destaque #E0457B · fundo #2E7D4F</code><button data-name="Chita" data-hex="papel #F6E9CF · destaque #E0457B · fundo #2E7D4F">Escolher esta</button></footer>
+</article>
+</main><script>
+document.querySelectorAll('footer button').forEach(b=>b.onclick=async()=>{b.disabled=true;b.textContent='Enviado';
+ try{await albedo.send('Escolhi a paleta "'+b.dataset.name+'" ('+b.dataset.hex+') para o cartão.')}catch(e){b.disabled=false;b.textContent='Escolher esta'}});
+document.querySelectorAll('#tabs button').forEach(t=>t.onclick=()=>{document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===t));
+ const f=t.dataset.f;document.querySelectorAll('.imgs figure').forEach((fig,i)=>{const k=i%3;fig.style.display=f==='all'||(f==='outside'&&k===0)||(f==='inside'&&k===1)?'':'none'});
+ document.querySelectorAll('.imgs').forEach(g=>g.style.gridTemplateColumns=f==='all'?'':'1fr')});
+</script><script>if(typeof albedo==='undefined')document.querySelectorAll('#pick,footer button').forEach(b=>b.style.display='none');</script></body></html>
